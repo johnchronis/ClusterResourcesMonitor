@@ -14,3 +14,5 @@ cp ~/exareme/etc/exareme/workers .
 cat ~/exareme/etc/exareme/master >> ./workers
 nohup ./masterStats.sh -w workers  >/dev/null 2>&1 &  
 nohup nodejs ./monitor.js  >/dev/null 2>&1   &
+
+echo "Usage can be viewed at <ip>:8484"
