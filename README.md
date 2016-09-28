@@ -13,7 +13,7 @@ A service that monitors cpu, memory and disk usage of a cluster. Detailed logs a
 ## Configuration 
 * When it is used without Exareme create a file called workers containing the ips of the nodes that you want to be monitored (one per line)
 
-## View Usage
+## View Live Usage 
 Usage can be monitored at <ip of server>:8484.
 
 ## Log
