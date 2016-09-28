@@ -16,5 +16,9 @@ A service that monitors cpu, memory and disk usage of a cluster. Detailed logs a
 ## View Live Usage 
 Usage can be monitored at <ip of server>:8484.
 
+![Alt text](/screenshots/live.png?raw=true "Live Status")
+
 ## Log
 The detailed logs are store at the directory statsLogs
+
+![Alt text](/screenshots/log.png?raw=true "Log")
