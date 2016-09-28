@@ -46,7 +46,12 @@ do
 echo 4
 	while read p; do
    		#echo $p
-  		res=`rsh -n $p /tmp/stats.sh ` 		
+  		if [ "127.0.0.1" == "$p" ] || [ "localhost" == "$p" ] ; then
+			res=`./stats.sh` 
+		else
+		        res=`rsh -n $p /tmp/stats.sh `
+		
+		fi
 		rec=`echo $res | awk -F "|" 'NR==1{print $1}'`
 		errmsg=`echo $res | awk -F "^" 'NR==1{print $2}'`
 			
