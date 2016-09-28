@@ -12,4 +12,7 @@
 * When it is used without Exareme create a file called workers containing the ip of the nodes that you want to be monitored (one per line)
 
 ## View Usage
-The statistics can be accessed through <ip of server>:8484.
+Usage can be monitored at <ip of server>:8484.
+
+## Log
+The detailed logs are store at the directory statsLogs
