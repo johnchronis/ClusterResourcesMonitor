@@ -20,7 +20,7 @@
 
 tmpdir=`cat ~/exareme/etc/exareme/art.properties | awk  'BEGIN { FS = "=" } ;/art.container.diskRoot=/ {print $2}'`
 if [ -z "${tmpdir}" ] ; then
-    errmsg="exareme was not found, monitoring /"
+    errmsg="monitoring /"
     tmpdir="/"
 fi
 

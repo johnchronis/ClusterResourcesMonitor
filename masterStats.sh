@@ -30,7 +30,9 @@ rm tmpmonitor.html 2> /dev/null
 mkdir statslogs 2> /dev/null
 echo 1.5
 while read p; do
- scp ./stats.sh `echo $p`:/tmp/ 
+  if [ "127.0.0.1" != "$p" ] || [ "localhost" != "$p" ] ; then
+    scp ./stats.sh `echo $p`:/tmp/
+  fi
 done <`echo $w`
 	#echo 2
 while read p; do
@@ -42,7 +44,7 @@ while [ 1 ]
 do
 	rm tmpmonitor.html 2> /dev/null
 	touch tmpmonitor.html
-	echo "<!DOCTYPE html><html><head><meta http-equiv=\"refresh\" content=\"3\"></ head><body><table style=\"width:80%\"><tr><th>Node</th><th align=\"left\">Cpu (% avg of cores)</th><th align=\"left\">Memory (%)</th><th align=\"left\">Disk (%)</th><th>Message</th></tr>"  > tmpmonitor.html
+	echo "<!DOCTYPE html><html><head><meta http-equiv=\"refresh\" content=\"3\"></ head><body><table style=\"min-width:800px;\"><tr><th>Node</th><th align=\"left\">Cpu (% avg of cores)</th><th align=\"left\">Memory (%)</th><th align=\"left\">Disk (%)</th><th>Message</th></tr>"  > tmpmonitor.html
 echo 4
 	while read p; do
    		#echo $p
